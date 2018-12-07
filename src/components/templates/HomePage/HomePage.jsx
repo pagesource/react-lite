@@ -1,7 +1,9 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 import PropTypes from 'prop-types';
 import { setHomePageData } from './actions';
+import { getHomePageName } from './selectors';
 
 class HomePage extends PureComponent {
   static propTypes = {
@@ -25,8 +27,8 @@ class HomePage extends PureComponent {
   }
 }
 
-export const mapStateToProps = state => ({
-  pageName: state && state.homePage && state.homePage.pageName,
+export const mapStateToProps = createStructuredSelector({
+  pageName: getHomePageName,
 });
 
 export const mapDispatchToProps = dispatch => ({

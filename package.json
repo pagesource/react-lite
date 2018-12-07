@@ -41,6 +41,7 @@
     "react-dom": "^16.6.3",
     "react-redux": "^6.0.0",
     "redux": "^4.0.1",
+    "reselect": "^4.0.0",
     "resolve": "^1.8.1",
     "sass-loader": "7.1.0",
     "style-loader": "0.23.0",
