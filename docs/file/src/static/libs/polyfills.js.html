@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">src/static/libs/polyfills.js | react-lite</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-App">App</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-atoms-button">components/atoms/Button</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-defaultConfig">defaultConfig</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#styles-theme">styles/theme</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-themes">themes</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/static/libs/polyfills.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">if (!String.prototype.startsWith) {
+  String.prototype.startsWith = function(search, pos) {
+    return this.substr(!pos || pos &lt; 0 ? 0 : +pos, search.length) === search;
+  };
+}
+
+if (!String.prototype.endsWith) {
+  String.prototype.endsWith = function(search, this_len) {
+    if (this_len === undefined || this_len &gt; this.length) {
+      this_len = this.length;
+    }
+    return this.substring(this_len - search.length, this_len) === search;
+  };
+}
+
+if (typeof Object.assign !== &apos;function&apos;) {
+  Object.defineProperty(Object, &apos;assign&apos;, {
+    value: function assign(target, varArgs) {
+      if (target == null) {
+        throw new TypeError(&apos;Cannot convert undefined or null to object&apos;);
+      }
+
+      const to = Object(target);
+
+      for (let index = 1; index &lt; arguments.length; index++) {
+        const nextSource = arguments[index];
+
+        if (nextSource != null) {
+          for (var nextKey in nextSource) {
+            if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
+              to[nextKey] = nextSource[nextKey];
+            }
+          }
+        }
+      }
+      return to;
+    },
+    writable: true,
+    configurable: true,
+  });
+}
+
+if (!Array.prototype.includes) {
+  Object.defineProperty(Array.prototype, &apos;includes&apos;, {
+    value: function(searchElement, fromIndex) {
+      if (this == null) {
+        throw new TypeError(&apos;&quot;this&quot; is null or not defined&apos;);
+      }
+
+      // 1. Let O be ? ToObject(this value).
+      const o = Object(this);
+
+      // 2. Let len be ? ToLength(? Get(O, &quot;length&quot;)).
+      const len = o.length &gt;&gt;&gt; 0;
+
+      // 3. If len is 0, return false.
+      if (len === 0) {
+        return false;
+      }
+
+      // 4. Let n be ? ToInteger(fromIndex).
+      //    (If fromIndex is undefined, this step produces the value 0.)
+      const n = fromIndex | 0;
+
+      // 5. If n &#x2265; 0, then
+      //  a. Let k be n.
+      // 6. Else n &lt; 0,
+      //  a. Let k be len + n.
+      //  b. If k &lt; 0, let k be 0.
+      let k = Math.max(n &gt;= 0 ? n : len - Math.abs(n), 0);
+
+      function sameValueZero(x, y) {
+        return x === y || (typeof x === &apos;number&apos; &amp;&amp; typeof y === &apos;number&apos; &amp;&amp; isNaN(x) &amp;&amp; isNaN(y));
+      }
+
+      // 7. Repeat, while k &lt; len
+      while (k &lt; len) {
+        // a. Let elementK be the result of ? Get(O, ! ToString(k)).
+        // b. If SameValueZero(searchElement, elementK) is true, return true.
+        if (sameValueZero(o[k], searchElement)) {
+          return true;
+        }
+        // c. Increase k by 1.
+        k++;
+      }
+
+      // 8. Return false
+      return false;
+    },
+  });
+}
+
+if (!Array.from) {
+  Array.from = function(object) {
+    return [].slice.call(object);
+  };
+}
+
+if (!Object.compareShallow) {
+  Object.compareShallow = function(obj1, obj2) {
+    if (!obj1 &amp;&amp; !obj2) {
+      return true;
+    }
+    if ((!obj1 &amp;&amp; obj2) || (obj1 &amp;&amp; !obj2)) {
+      return false;
+    }
+
+    const obj1Keys = Object.keys(obj1);
+    const obj2Keys = Object.keys(obj2);
+
+    if (obj1Keys.length !== obj2Keys.length) {
+      return false;
+    }
+
+    return obj1Keys.every(function(key) {
+      return obj1[key] === obj2[key];
+    });
+  };
+}
+
+if (typeof window.CustomEvent !== &apos;function&apos;) {
+  window.CustomEvent = function CustomEvent(event, params) {
+    params = params || { bubbles: false, cancelable: false, detail: undefined };
+    const evt = document.createEvent(&apos;CustomEvent&apos;);
+    evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
+    return evt;
+  };
+  window.CustomEvent.prototype = window.Event.prototype;
+}
+
+if (!String.prototype.padStart) {
+  String.prototype.padStart = function padStart(targetLength, padString) {
+    targetLength = targetLength &gt;&gt; 0; //truncate if number or convert non-number to 0;
+    padString = String(typeof padString !== &apos;undefined&apos; ? padString : &apos; &apos;);
+    if (this.length &gt; targetLength) {
+      return String(this);
+    } else {
+      targetLength = targetLength - this.length;
+      if (targetLength &gt; padString.length) {
+        padString += padString.repeat(targetLength / padString.length); //append to original to ensure we are longer than needed
+      }
+      return padString.slice(0, targetLength) + String(this);
+    }
+  };
+}
+
+if (!Object.entries) {
+  Object.entries = function(obj) {
+    return Object.keys(obj).map(function(key) {
+      return [key, obj[key]];
+    });
+  };
+}
+
+if (!Object.values) {
+  Object.values = function(obj) {
+    return Object.keys(obj).map(function(key) {
+      return obj[key];
+    });
+  };
+}
+
+(function (arr) {
+  arr.forEach(function (item) {
+    if (item.hasOwnProperty(&apos;remove&apos;)) {
+      return;
+    }
+    Object.defineProperty(item, &apos;remove&apos;, {
+      configurable: true,
+      enumerable: true,
+      writable: true,
+      value: function remove() {
+        if (this.parentNode !== null)
+          this.parentNode.removeChild(this);
+      }
+    });
+  });
+})([Element.prototype, CharacterData.prototype, DocumentType.prototype]);
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

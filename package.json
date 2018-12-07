@@ -60,6 +60,11 @@
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
     "enzyme-to-json": "^3.3.5",
+    "esdoc": "^1.1.0",
+    "esdoc-ecmascript-proposal-plugin": "^1.0.0",
+    "esdoc-flow-type-plugin": "^1.1.0",
+    "esdoc-jsx-plugin": "^1.0.0",
+    "esdoc-standard-plugin": "^1.0.0",
     "eslint": "^5.9.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.1.0",
@@ -100,7 +105,9 @@
     "flow:coverage": "flow-coverage-report -i 'src/**/*.js' -x 'src/**/*.spec.js' -t html -t json -t text -o reports/flow/ --threshold 70",
     "generate": "plop --plopfile generators/index.js",
     "storybook": "start-storybook -s ./src/static -p 6009",
-    "build-storybook": "build-storybook -c .storybook -o ./out"
+    "build-storybook": "build-storybook -c .storybook -o ./out",
+    "esdoc": "esdoc -c .esdoc.json",
+    "pretty": "prettier --write **/*.{js,json,css}"
   },
   "browserslist": [
     ">0.2%",
