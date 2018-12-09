@@ -30,7 +30,11 @@
   <ul>
     
   <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-App">App</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-configureStore">configureStore</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-atoms-button">components/atoms/Button</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-defaultConfig">defaultConfig</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-templates-homepage">components/templates/HomePage</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-setHomePageData">setHomePageData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-reducer">reducer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-getHomePageName">getHomePageName</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#styles-theme">styles/theme</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-themes">themes</a></span></span></li>
 </ul>
 </div>
@@ -38,21 +42,13 @@
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/App.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import React from &apos;react&apos;;
-import logo from &apos;./logo.svg&apos;;
 import &apos;./App.css&apos;;
+import HomePage from &apos;./components/templates/HomePage/HomePage&apos;;
 
 const App = () =&gt; (
   &lt;div className=&quot;App&quot;&gt;
     &lt;header className=&quot;App-header&quot;&gt;
-      &lt;img src={logo} className=&quot;App-logo&quot; alt=&quot;logo&quot; /&gt;
-      &lt;p&gt;
-        Edit
-        &lt;code&gt;src/App.js&lt;/code&gt;
-        and save to reload.
-      &lt;/p&gt;
-      &lt;a className=&quot;App-link&quot; href=&quot;https://reactjs.org&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;
-        Learn React
-      &lt;/a&gt;
+      &lt;HomePage /&gt;
     &lt;/header&gt;
   &lt;/div&gt;
 );

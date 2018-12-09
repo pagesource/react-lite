@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "wmaurer.change-case",
+    "streetsidesoftware.code-spell-checker",
+    "msjsdiag.debugger-for-chrome",
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "flowtype.flow-for-vscode",
+    "eamodio.gitlens",
+    "wix.vscode-import-cost",
+    "christian-kohler.npm-intellisense",
+    "esbenp.prettier-vscode",
+    "sonarsource.sonarlint-vscode",
+    "gcazaciuc.vscode-flow-ide"
+  ]
+}

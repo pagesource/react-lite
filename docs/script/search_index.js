@@ -6,10 +6,34 @@ window.esdocSearchIndex = [
     "function"
   ],
   [
+    "react-lite/src/store.js~configurestore",
+    "function/index.html#static-function-configureStore",
+    "<span>configureStore</span> <span class=\"search-result-import-path\">react-lite/src/store.js</span>",
+    "function"
+  ],
+  [
     "react-lite/src/components/atoms/button/button.mock.js~defaultconfig",
     "variable/index.html#static-variable-defaultConfig",
     "<span>defaultConfig</span> <span class=\"search-result-import-path\">react-lite/src/components/atoms/Button/Button.mock.js</span>",
     "variable"
+  ],
+  [
+    "react-lite/src/components/templates/homepage/selectors.js~gethomepagename",
+    "variable/index.html#static-variable-getHomePageName",
+    "<span>getHomePageName</span> <span class=\"search-result-import-path\">react-lite/src/components/templates/HomePage/selectors.js</span>",
+    "variable"
+  ],
+  [
+    "react-lite/src/components/templates/homepage/reducer.js~reducer",
+    "function/index.html#static-function-reducer",
+    "<span>reducer</span> <span class=\"search-result-import-path\">react-lite/src/components/templates/HomePage/reducer.js</span>",
+    "function"
+  ],
+  [
+    "react-lite/src/components/templates/homepage/actions.js~sethomepagedata",
+    "function/index.html#static-function-setHomePageData",
+    "<span>setHomePageData</span> <span class=\"search-result-import-path\">react-lite/src/components/templates/HomePage/actions.js</span>",
+    "function"
   ],
   [
     "react-lite/src/styles/theme/index.js~themes",
@@ -342,9 +366,33 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "src/components/templates/homepage/actions.js",
+    "file/src/components/templates/HomePage/actions.js.html",
+    "src/components/templates/HomePage/actions.js",
+    "file"
+  ],
+  [
+    "src/components/templates/homepage/reducer.js",
+    "file/src/components/templates/HomePage/reducer.js.html",
+    "src/components/templates/HomePage/reducer.js",
+    "file"
+  ],
+  [
+    "src/components/templates/homepage/selectors.js",
+    "file/src/components/templates/HomePage/selectors.js.html",
+    "src/components/templates/HomePage/selectors.js",
+    "file"
+  ],
+  [
     "src/index.js",
     "file/src/index.js.html",
     "src/index.js",
+    "file"
+  ],
+  [
+    "src/reducers.js",
+    "file/src/reducers.js.html",
+    "src/reducers.js",
     "file"
   ],
   [
@@ -363,6 +411,12 @@ window.esdocSearchIndex = [
     "src/static/libs/post-load.min.js",
     "file/src/static/libs/post-load.min.js.html",
     "src/static/libs/post-load.min.js",
+    "file"
+  ],
+  [
+    "src/store.js",
+    "file/src/store.js.html",
+    "src/store.js",
     "file"
   ],
   [

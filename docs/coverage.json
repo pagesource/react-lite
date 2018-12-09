@@ -1,7 +1,7 @@
 {
-  "coverage": "0%",
-  "expectCount": 7,
-  "actualCount": 0,
+  "coverage": "8.33%",
+  "expectCount": 12,
+  "actualCount": 1,
   "files": {
     "src/App.js": {
       "expectCount": 1,
@@ -24,12 +24,39 @@
         1
       ]
     },
+    "src/components/templates/HomePage/actions.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        1
+      ]
+    },
+    "src/components/templates/HomePage/reducer.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        1
+      ]
+    },
+    "src/components/templates/HomePage/selectors.js": {
+      "expectCount": 2,
+      "actualCount": 0,
+      "undocumentLines": [
+        3,
+        5
+      ]
+    },
     "src/static/libs/post-load.min.js": {
       "expectCount": 1,
       "actualCount": 0,
       "undocumentLines": [
         6
       ]
+    },
+    "src/store.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
     },
     "src/styles/cssIncludes.js": {
       "expectCount": 1,

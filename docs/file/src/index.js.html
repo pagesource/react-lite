@@ -30,7 +30,11 @@
   <ul>
     
   <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-App">App</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-configureStore">configureStore</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-atoms-button">components/atoms/Button</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-defaultConfig">defaultConfig</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-templates-homepage">components/templates/HomePage</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-setHomePageData">setHomePageData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-reducer">reducer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-getHomePageName">getHomePageName</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#styles-theme">styles/theme</a><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-themes">themes</a></span></span></li>
 </ul>
 </div>
@@ -39,10 +43,17 @@
 <div class="content" data-ice="content"><h1 data-ice="title">src/index.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import React from &apos;react&apos;;
 import ReactDOM from &apos;react-dom&apos;;
+import { Provider } from &apos;react-redux&apos;;
 import &apos;./index.css&apos;;
 import App from &apos;./App&apos;;
+import configureStore from &apos;./store&apos;;
 
-ReactDOM.render(&lt;App /&gt;, document.getElementById(&apos;root&apos;));
+ReactDOM.render(
+  &lt;Provider store={configureStore()}&gt;
+    &lt;App /&gt;
+  &lt;/Provider&gt;,
+  document.getElementById(&apos;root&apos;)
+);
 </code></pre>
 
 </div>
