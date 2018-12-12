@@ -4,3 +4,4 @@ docs/
 reports/
 .history/
 out/
+flow-typed/npm/

@@ -1,44 +1,40 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Lite
 
-## Available Scripts
+This repository is a React Framework built for client side applications. It provides facility for creation of boilerplate setup and also provides various important utilities which help if faster application development.
 
-In the project directory, you can run:
+## Ecosystem of this framework 🎉
 
-### `npm start`
+- **Redux + Redux-Saga** for state management
+- **Reselect** for optimizations
+- **Dynamic reducer/saga** injection
+- **Flow typed:** All components are FlowTyped and Flow Type checked.
+- **Static Code Quality checks and formatting:** Javascript and CSS linting using Eslint, Stylelint and Prettier.
+- **Component scaffolding:** Consistently generate components using Plop.
+- **Documentation:** Generates code documentation with ESDocs.
+- **Git Hooks:** Pre-commit, Pre-push and pre-publish using Husky.
+- **Unit testing framework:** with Jest and Enzyme.
+- **Babel 7** to transpiling javascript and releasing them as ESModules.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Getting Started
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Dependencies should be installed using the yarn
+command line tools.
 
-### `npm test`
+```sh
+yarn install
+yarn run flow:install
+```
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+flow:install will search the [`libdef`](https://github.com/flow-typed/flow-typed/blob/master/README.md) repo and download all the libdefs that are relevant for our project and install them for us.
 
-### `npm run build`
+## Topics to refer
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [Development Tools](readme/DevelopmentTools.md)
+- [Static Code Linters and Code Formatter](readme/StaticCodeLinters.md)
+- [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/)
+- [Folder Structure](readme/FolderStructure.md)
+- [Component Scaffolding](readme/Component.md)
+- [Flow Type](readme/FlowType.md)
+- [Husky](readme/Husky.md)
+- [ES Docs](readme/ESDocs.md)
+- [Running The Tests](readme/Test.md)

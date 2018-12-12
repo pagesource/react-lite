@@ -12,7 +12,10 @@ storiesOf('Atoms', module).addWithChapters('Button', {
       sections: [
         {
           sectionFn: () => (
-            <ButtonVanilla {...defaultConfig} className={`hide-default-sample ${defaultConfig.className}`} />
+            <ButtonVanilla
+              {...defaultConfig}
+              className={`hide-default-sample ${defaultConfig.className}`}
+            />
           ),
           options: {
             showSource: true,

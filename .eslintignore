@@ -12,3 +12,7 @@ stories
 # Make sure to INCLUDE the following,
 # because eslint ignores hidden/dotfiles by default.
 .storybook
+src/**/libs/
+flow-typed/npm/
+config
+scripts
