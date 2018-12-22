@@ -1,6 +1,6 @@
 # React Lite
 
-This repository is a reference architecture based on React for building client side rendering applications. It provides various and important utilities which will help in faster application development and try provide a recommended development ecosystem.
+This repository is a reference architecture based on React for building client side rendering applications. It provides various features and important utilities which will help in faster application development and try provide a recommended development ecosystem.
 
 ## Ecosystem of this framework 🎉
 
