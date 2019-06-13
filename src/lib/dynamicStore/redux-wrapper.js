@@ -49,8 +49,8 @@ export default (makeStore, configObj = {}) => {
       constructor(props, context) {
         super(props, context);
 
-        let { store } = props;
-        const { initialState } = props;
+        let { store } = props; // eslint-disable-line
+        const { initialState } = props; // eslint-disable-line
 
         const hasStore = store && 'dispatch' in store && 'getState' in store;
 
@@ -74,7 +74,7 @@ export default (makeStore, configObj = {}) => {
       }
 
       render() {
-        const { initialState, store, ...props } = this.props;
+        const { initialState, store, ...props } = this.props; // eslint-disable-line
         return (
           <Provider store={this.store}>
             <App {...props} store={this.store} />

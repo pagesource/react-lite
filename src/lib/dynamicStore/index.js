@@ -2,7 +2,7 @@ export {
   setApplicationBootStrapActions,
   setGlobalPageTransitionActions,
   setGlobalErrorPage,
-  default as clientEnhance,
+  default as enhance,
 } from './enhance';
 
 export { initialiseGlobalSagas } from './configureStore';

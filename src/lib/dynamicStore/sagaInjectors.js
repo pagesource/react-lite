@@ -1,5 +1,7 @@
 // @flow
 
+/* eslint-disable */
+
 import isFunction from 'lodash/isFunction';
 import isString from 'lodash/isString';
 import invariant from 'invariant';
@@ -30,6 +32,7 @@ const checkKey = (key: string): void =>
  * @private
  */
 const checkDescriptor = (descriptor: DescriptorType): void => {
+  debugger; //eslint-disable-line
   const shape = {
     saga: isFunction,
     mode: mode => isString(mode) && allowedModes.indexOf(mode) > -1,
@@ -56,11 +59,11 @@ export function injectSagaFactory(store: Object, isValid: boolean) {
    */
   function injectSaga(key: string, descriptor: DescriptorType = {}, args: any) {
     if (!isValid) checkStore(store);
-
+    debugger; //eslint-disable-line
     // if mode is not present then default is RESTART_ON_REMOUNT
     const newDescriptor = { ...descriptor, mode: descriptor.mode || RESTART_ON_REMOUNT };
     const { saga, mode } = newDescriptor;
-
+    debugger; //eslint-disable-line
     checkKey(key);
     checkDescriptor(newDescriptor);
 
@@ -133,6 +136,7 @@ export function ejectSagaFactory(store: Object, isValid: boolean): Function {
  * @returns {SagaInjectors}
  */
 export default function getInjectors(store: StoreType): InjectorsType {
+  debugger; //eslint-disable-line
   checkStore(store);
 
   return {
