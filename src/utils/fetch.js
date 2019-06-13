@@ -19,6 +19,7 @@ class ServiceUtils {
   // corss check from reviewer
   fetch = (url: string, props: Object) => {
     let { headers } = props;
+    console.log(rocess.env.API_SECRET_KEY, process.env.mode);
     if (process.env.mode === 'development' && process.env.API_SECRET_KEY) {
       headers = { 'secret-key': process.env.API_SECRET_KEY, ...headers };
     }

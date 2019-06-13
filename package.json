@@ -135,7 +135,6 @@
     "pretty": "prettier --write **/*.{js,json,css}",
     "mock": "node ./canned.config.js"
   },
-  "proxy": "https://api.jsonbin.io",
   "babel": {
     "presets": [
       "react-app"
