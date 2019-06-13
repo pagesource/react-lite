@@ -77,6 +77,7 @@
     "@storybook/addons": "^5.0.11",
     "@storybook/react": "^5.0.11",
     "chalk": "^2.4.1",
+    "cross-env": "^5.2.0",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
     "enzyme-to-json": "^3.3.5",
@@ -116,7 +117,7 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js",
+    "test": "cross-env NODE_ENV=test jest --config ./config/jest.config.js",
     "test:updateSnapshot": "yarn run test --updateSnapshot",
     "test:watch": "yarn run test --watch",
     "lint:js": "eslint src/**/*.js",
@@ -134,6 +135,7 @@
     "pretty": "prettier --write **/*.{js,json,css}",
     "mock": "node ./canned.config.js"
   },
+  "proxy": "https://api.jsonbin.io",
   "babel": {
     "presets": [
       "react-app"

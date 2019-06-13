@@ -68,7 +68,6 @@ export default (options: Object) => (BaseComponent: Node): Node => {
     if (hasSaga) {
       // Run saga and keep the task returned by running saga to access later while cancelling.
       // $FlowFixMe eslint-disablie-line
-      debugger; // eslint-disable-line
       store.injectedSagas[options.key] = { ...options.saga, task: store.runSaga(options.saga) };
     }
     return store;

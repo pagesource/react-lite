@@ -31,7 +31,6 @@ export default function monitorSagas(
     Promise.all(allTasks.map(t => t.done)).then(() => {
       if (!isServer && shouldDispatchEnd) {
         const { injectSaga } = getSagaInjectors(store);
-        debugger; // eslint-disable-line
         each(store.injectedSagas, (descriptor, key) => {
           const { saga } = descriptor;
           injectSaga(key, { saga });

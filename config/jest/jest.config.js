@@ -1,6 +1,6 @@
 module.exports = {
   rootDir: '../',
-  setupFiles: ['<rootDir>/config/jest/jest.setup.js'],
+  setupFiles: ['<rootDir>/config/jest.setup.js'],
   moduleDirectories: ['node_modules'],
   testPathIgnorePatterns: ['<rootDir>/dist/', '<rootDir>/out/'],
   testResultsProcessor: 'jest-sonar-reporter',
