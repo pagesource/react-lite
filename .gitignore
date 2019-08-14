@@ -28,6 +28,7 @@ docs/
 
 # flow type
 flow-typed/npm/
+flow-typed/
 
 # reports
 reports/

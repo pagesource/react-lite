@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NavBar /> should render correctly 1`] = `
+<nav>
+  Test
+</nav>
+`;
+
+exports[`<NavBar /> should render correctly 2`] = `
+<nav>
+  <ul>
+    <li
+      key="0"
+      role="none"
+    >
+      <Link
+        href="/1"
+        role="menuitem"
+      >
+        <a>
+          Link 1
+        </a>
+      </Link>
+    </li>
+    <li
+      key="1"
+      role="none"
+    >
+      <Link
+        href="/2"
+        role="menuitem"
+      >
+        <a>
+          Link 2
+        </a>
+      </Link>
+    </li>
+  </ul>
+</nav>
+`;

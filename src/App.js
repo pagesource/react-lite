@@ -1,13 +1,10 @@
 import React from 'react';
+import { enhance } from './lib/dynamicStore';
 import './App.css';
-import HomePage from './components/templates/HomePage/HomePage';
+import HomePage from './containers/templates/HomePage/HomePage';
 
-const App = () => (
-  <div className="App">
-    <header className="App-header">
-      <HomePage />
-    </header>
-  </div>
-);
+const App = () => <HomePage />;
 
-export default App;
+export default enhance(App, {
+  key: 'app',
+});

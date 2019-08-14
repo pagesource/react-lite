@@ -5,6 +5,7 @@
  *
  */
 import React from 'react';
+import type { Node } from 'react';
 import styled from 'styled-components';
 
 import styles from './Button.style';
