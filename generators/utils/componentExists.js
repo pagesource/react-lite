@@ -16,8 +16,22 @@ const components = atomComponents
   .concat(organismComponents)
   .concat(templateComponents);
 
-function componentExists(comp) {
-  return components.indexOf(comp) >= 0;
+const atomContainers = fs.readdirSync(path.join(__dirname, '../../src/containers/atoms'));
+const moleculeContainers = fs.readdirSync(path.join(__dirname, '../../src/containers/molecules'));
+const organismContainers = fs.readdirSync(path.join(__dirname, '../../src/containers/organisms'));
+const templateContainers = fs.readdirSync(path.join(__dirname, '../../src/containers/templates'));
+const containers = atomContainers
+  .concat(moleculeContainers)
+  .concat(organismContainers)
+  .concat(templateContainers);
+
+const componentContainer = {
+  components,
+  containers,
+};
+
+function componentExists(comp, category) {
+  return componentContainer[category].indexOf(comp) >= 0;
 }
 
 module.exports = componentExists;
