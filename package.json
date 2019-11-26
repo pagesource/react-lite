@@ -102,8 +102,11 @@
     "flow-coverage-report": "^0.6.0",
     "flow-typed": "^2.5.1",
     "husky": "^1.1.0",
+    "jest-sonar-reporter": "^2.0.0",
+    "jest-styled-components": "^6.3.4",
     "lint-staged": "^7.3.0",
     "plop": "^2.3.0",
+    "prettier": "^1.19.1",
     "react-storybook-addon-chapters": "^3.1.3",
     "redux-mock-store": "^1.5.3",
     "storybook-addon-smart-knobs": "^4.1.2",
@@ -117,7 +120,7 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "cross-env NODE_ENV=test jest --config ./config/jest.config.js",
+    "test": "cross-env NODE_ENV=test jest --config ./config/jest/jest.config.js",
     "test:updateSnapshot": "yarn run test --updateSnapshot",
     "test:watch": "yarn run test --watch",
     "lint:js": "eslint src/**/*.js",
@@ -132,7 +135,7 @@
     "storybook": "start-storybook -s ./src/static -p 6009",
     "build-storybook": "build-storybook -c .storybook -o ./out",
     "esdoc": "esdoc -c .esdoc.json",
-    "pretty": "prettier --write **/*.{js,json,css}",
+    "pretty": "prettier --write 'src/**/*.{js,json,css}'",
     "mock": "node ./canned.config.js"
   },
   "babel": {
