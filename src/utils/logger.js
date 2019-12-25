@@ -23,4 +23,4 @@ class Logger {
 
 const logger = new Logger();
 
-module.exports = logger.getLogger();
+export default logger.getLogger();

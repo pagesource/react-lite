@@ -6,11 +6,7 @@ exports[`HomePage component should render correctly 1`] = `
   id="content-wrapper"
   title="home"
 >
-  <HeadTag
-    description="Universal React - boilerplate for server side rendered react applications"
-    title="Universal React - boilerplate"
-  />
-  <withStyles
+  <Styled(TopBanner)
     title="Test Title"
   />
   <section
@@ -20,7 +16,7 @@ exports[`HomePage component should render correctly 1`] = `
       className="inner"
     >
       <h2>
-        Why Universal React?
+        Why React Lite?
       </h2>
       <p>
         A community accepted and reliable XT Dev Ecosystem, that can be utilized as baseline for development of all types of projects, to achieve dependable delivery standards. This ecosystem doesn't intend to provide lot of out of the box code/components but a well configured development environment and delivery pipeline, having balanced focus to Static Code Quality, Performance, Processes, Security, Testability and Best Practices. This boilerplate will help project teams in building applications with great quality, by giving them more time to focus on business problems rather than web development chores.
@@ -130,12 +126,14 @@ exports[`HomePage component should render correctly 1`] = `
         <Anchor
           as=""
           className=""
+          elementLocator=""
           forceClick={false}
           handleLinkClick={[Function]}
           href="https://github.com/flow-typed/flow-typed/blob/master/README.md"
           inheritedStyles=""
           scroll={false}
           shallow={false}
+          target=""
         >
           libdef
         </Anchor>
@@ -149,11 +147,13 @@ exports[`HomePage component should render correctly 1`] = `
           <Anchor
             as=""
             className=""
+            elementLocator=""
             forceClick={false}
             handleLinkClick={[Function]}
             inheritedStyles=""
             scroll={false}
             shallow={false}
+            target=""
             to="https://github.com/pagesource/universal-react/blob/master/readme/02-DevelopmentTools.md"
           >
             Development Tools
@@ -163,11 +163,13 @@ exports[`HomePage component should render correctly 1`] = `
           <Anchor
             as=""
             className=""
+            elementLocator=""
             forceClick={false}
             handleLinkClick={[Function]}
             inheritedStyles=""
             scroll={false}
             shallow={false}
+            target=""
             to="https://github.com/pagesource/universal-react/blob/master/readme/07-QualityControl.md"
           >
             Static Code Linters and Code Formatter
@@ -177,6 +179,7 @@ exports[`HomePage component should render correctly 1`] = `
           <Anchor
             as=""
             className=""
+            elementLocator=""
             forceClick={false}
             handleLinkClick={[Function]}
             href="http://bradfrost.com/blog/post/atomic-web-design/"
@@ -184,6 +187,7 @@ exports[`HomePage component should render correctly 1`] = `
             rel="nofollow"
             scroll={false}
             shallow={false}
+            target=""
           >
             Atomic Design
           </Anchor>
@@ -192,11 +196,13 @@ exports[`HomePage component should render correctly 1`] = `
           <Anchor
             as=""
             className=""
+            elementLocator=""
             forceClick={false}
             handleLinkClick={[Function]}
             inheritedStyles=""
             scroll={false}
             shallow={false}
+            target=""
             to="https://github.com/pagesource/universal-react/blob/master/readme/04-FolderStructure.md"
           >
             Folder Structure
@@ -206,11 +212,13 @@ exports[`HomePage component should render correctly 1`] = `
           <Anchor
             as=""
             className=""
+            elementLocator=""
             forceClick={false}
             handleLinkClick={[Function]}
             inheritedStyles=""
             scroll={false}
             shallow={false}
+            target=""
             to="https://github.com/pagesource/universal-react/blob/master/readme/03-Generators.md"
           >
             Component Scaffolding
@@ -220,11 +228,13 @@ exports[`HomePage component should render correctly 1`] = `
           <Anchor
             as=""
             className=""
+            elementLocator=""
             forceClick={false}
             handleLinkClick={[Function]}
             inheritedStyles=""
             scroll={false}
             shallow={false}
+            target=""
             to="https://github.com/pagesource/universal-react/blob/master/readme/05-FlowType.md"
           >
             Flow Type
@@ -234,11 +244,13 @@ exports[`HomePage component should render correctly 1`] = `
           <Anchor
             as=""
             className=""
+            elementLocator=""
             forceClick={false}
             handleLinkClick={[Function]}
             inheritedStyles=""
             scroll={false}
             shallow={false}
+            target=""
             to="https://github.com/pagesource/universal-react/blob/master/readme/07-QualityControl.md#husky"
           >
             Husky
@@ -248,11 +260,13 @@ exports[`HomePage component should render correctly 1`] = `
           <Anchor
             as=""
             className=""
+            elementLocator=""
             forceClick={false}
             handleLinkClick={[Function]}
             inheritedStyles=""
             scroll={false}
             shallow={false}
+            target=""
             to="https://github.com/pagesource/universal-react/blob/master/readme/ESDocs.md"
           >
             ES Docs
@@ -262,11 +276,13 @@ exports[`HomePage component should render correctly 1`] = `
           <Anchor
             as=""
             className=""
+            elementLocator=""
             forceClick={false}
             handleLinkClick={[Function]}
             inheritedStyles=""
             scroll={false}
             shallow={false}
+            target=""
             to="https://github.com/pagesource/universal-react/blob/master/readme/06-Storybook.md"
           >
             Storybook
@@ -276,11 +292,13 @@ exports[`HomePage component should render correctly 1`] = `
           <Anchor
             as=""
             className=""
+            elementLocator=""
             forceClick={false}
             handleLinkClick={[Function]}
             inheritedStyles=""
             scroll={false}
             shallow={false}
+            target=""
             to="https://github.com/pagesource/universal-react/blob/master/readme/08-Test.md"
           >
             Running The Tests

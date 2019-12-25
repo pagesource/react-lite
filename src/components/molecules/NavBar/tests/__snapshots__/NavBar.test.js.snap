@@ -14,12 +14,11 @@ exports[`<NavBar /> should render correctly 2`] = `
       role="none"
     >
       <Link
-        href="/1"
+        replace={false}
         role="menuitem"
+        to="/1"
       >
-        <a>
-          Link 1
-        </a>
+        Link 1
       </Link>
     </li>
     <li
@@ -27,12 +26,11 @@ exports[`<NavBar /> should render correctly 2`] = `
       role="none"
     >
       <Link
-        href="/2"
+        replace={false}
         role="menuitem"
+        to="/2"
       >
-        <a>
-          Link 2
-        </a>
+        Link 2
       </Link>
     </li>
   </ul>

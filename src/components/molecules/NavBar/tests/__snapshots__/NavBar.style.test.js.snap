@@ -1,59 +1,94 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ProgressCircle Component should match snapshot  1`] = `
-<nav
-  className="bRgQpT"
->
-  <ul>
-    <li
-      role="none"
-    >
-      <a
-        href="/1"
-        onClick={[Function]}
-      >
-        Link 1
-      </a>
-    </li>
-    <li
-      role="none"
-    >
-      <a
-        href="/2"
-        onClick={[Function]}
-      >
-        Link 2
-      </a>
-    </li>
-  </ul>
-</nav>
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": false,
+        "rules": Array [
+          "
+  ",
+          [Function],
+          ";
+  ",
+          [Function],
+          ";
+",
+        ],
+      },
+      "displayName": "Styled(NavBar)",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": [Function],
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+  items={
+    Array [
+      Object {
+        "href": "/1",
+        "label": "Link 1",
+      },
+      Object {
+        "href": "/2",
+        "label": "Link 2",
+      },
+    ]
+  }
+/>
 `;
 
 exports[`ProgressCircle Component should match snapshot with vertical view  1`] = `
-<nav
-  className="cGGiQb"
->
-  <ul>
-    <li
-      role="none"
-    >
-      <a
-        href="/1"
-        onClick={[Function]}
-      >
-        Link 1
-      </a>
-    </li>
-    <li
-      role="none"
-    >
-      <a
-        href="/2"
-        onClick={[Function]}
-      >
-        Link 2
-      </a>
-    </li>
-  </ul>
-</nav>
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": false,
+        "rules": Array [
+          "
+  ",
+          [Function],
+          ";
+  ",
+          [Function],
+          ";
+",
+        ],
+      },
+      "displayName": "Styled(NavBar)",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": [Function],
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+  items={
+    Array [
+      Object {
+        "href": "/1",
+        "label": "Link 1",
+      },
+      Object {
+        "href": "/2",
+        "label": "Link 2",
+      },
+    ]
+  }
+  vertical={true}
+/>
 `;

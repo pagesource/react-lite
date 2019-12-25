@@ -4,7 +4,6 @@ import es6promise from 'es6-promise';
 
 es6promise.polyfill();
 
-/* eslint-disable */
 class ServiceUtils {
   sessions: Object;
 
@@ -17,15 +16,20 @@ class ServiceUtils {
   }
 
   // corss check from reviewer
-  fetch = (url: string, props: Object) => {
+  fetch = (url: string, props?: Object = {}) => {
     let { headers } = props;
-    console.log(rocess.env.API_SECRET_KEY, process.env.mode);
-    if (process.env.mode === 'development' && process.env.API_SECRET_KEY) {
-      headers = { 'secret-key': process.env.API_SECRET_KEY, ...headers };
+    // $FlowFixMe eslint-disable
+    const apiUrl = `${process.env.REACT_APP_API_PATH}${url}`;
+    if (process.env.NODE_ENV === 'development' && process.env.REACT_APP_SECRET_KEY) {
+      headers = { 'secret-key': process.env.REACT_APP_SECRET_KEY, ...headers };
     }
-    return fetch(url, {
+    /* eslint-disable compat/compat */
+    return fetch(apiUrl, {
       ...props,
-    });
+      headers,
+    })
+      .then(r => r.json())
+      .then(data => data);
   };
 }
 /* eslint-enable */

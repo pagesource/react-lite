@@ -4,9 +4,9 @@ import API from '../../utils/fetch';
 import { GET_APPLICATION_LABELS } from '../constants';
 import { setApplicationLabels } from '../actions';
 
-export function* getApplicationLabels(actions) {
+export function* getApplicationLabels() {
   try {
-    const data = yield call(API.fetch, API_URLS.labels, actions);
+    const data = yield call(API.fetch, API_URLS.labels);
     yield put(setApplicationLabels(data));
   } catch (err) {
     yield put(setApplicationLabels({}));

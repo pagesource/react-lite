@@ -13,7 +13,7 @@ const HomePage = ({ editorialData }: Props): Node => {
       <TopBanner title={title} subTitle={subTitle} />
       <section className="wrapper">
         <div className="inner">
-          <h2>Why Universal React?</h2>
+          <h2>Why React Lite?</h2>
           <p>
             A community accepted and reliable XT Dev Ecosystem, that can be utilized as baseline for
             development of all types of projects, to achieve dependable delivery standards. This
