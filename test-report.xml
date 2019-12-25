@@ -1,135 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/containers/organisms/Header/tests/Header.test.js">
-    <testCase name="Header component should render correctly" duration="23"/>
-  </file>
-  <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/components/molecules/NavBar/tests/NavBar.test.js">
-    <testCase name="&lt;NavBar /&gt; should render correctly" duration="37"/>
-    <testCase name="&lt;NavBar /&gt; should render correctly" duration="22"/>
+  <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/components/molecules/TopBanner/tests/TopBanner.test.js">
+    <testCase name="&lt;TopBanner /&gt; should render correctly" duration="35"/>
+    <testCase name="&lt;TopBanner /&gt; should render correctly without subtitle" duration="6"/>
   </file>
   <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/components/molecules/NavBar/tests/NavBar.style.test.js">
-    <testCase name="ProgressCircle Component should match snapshot " duration="53"/>
-    <testCase name="ProgressCircle Component should match snapshot with vertical view " duration="7"/>
+    <testCase name="ProgressCircle Component should match snapshot " duration="40"/>
+    <testCase name="ProgressCircle Component should match snapshot with vertical view " duration="11"/>
+  </file>
+  <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/containers/organisms/Header/tests/Header.test.js">
+    <testCase name="Header component should render correctly" duration="48"/>
   </file>
   <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/containers/organisms/Footer/tests/Footer.test.js">
-    <testCase name="Footer component should render correctly" duration="31"/>
-  </file>
-  <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/components/templates/HomePage/tests/HomePage.test.js">
-    <testCase name="HomePage component should render correctly" duration="38"/>
-  </file>
-  <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/containers/templates/HomePage/tests/HomePage.test.js">
-    <testCase name="HomePage component should render correctly" duration="41"/>
-  </file>
-  <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/App.test.js">
-    <testCase name="renders without crashing" duration="179"/>
-  </file>
-  <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/global/AnalyticsTracking/tests/AnalyticsTracking.test.js">
-    <testCase name="initializeTrackerConfig should execute initializeTrackerConfig" duration="2"/>
-    <testCase name="initializeTrackerConfig should not set dataLayer in non browser mode" duration="1"/>
-    <testCase name="initializeTrackerConfig should set dataLayer in browser mode" duration="1"/>
-  </file>
-  <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/lib/dynamicStore/tests/checkstore.test.js">
-    <testCase name="checkStore should not throw if passed valid store shape" duration="3"/>
-    <testCase name="checkStore should throw if passed invalid store shape" duration="26"/>
-  </file>
-  <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/lib/dynamicStore/tests/injectSagaAndReducer.test.js">
-    <testCase name="injectSagaAndReducer should fail if key is not passed" duration="10"/>
-    <testCase name="injectSagaAndReducer should remove old sagas from store.injectedSagas" duration="4"/>
-    <testCase name="injectSagaAndReducer should inject saga" duration="2"/>
-    <testCase name="injectSagaAndReducer should inject reducer" duration="1"/>
-    <testCase name="injectSagaAndReducer should inject saga and reducer" duration="2"/>
-  </file>
-  <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/lib/dynamicStore/tests/sagaInjectors.test.js">
-    <testCase name="injectors getInjectors should return injectors" duration="4"/>
-    <testCase name="injectors getInjectors should throw if passed invalid store shape" duration="18"/>
-    <testCase name="injectors ejectSaga helper should check a store if the second argument is falsy" duration="2"/>
-    <testCase name="injectors ejectSaga helper should not check a store if the second argument is true" duration="1"/>
-    <testCase name="injectors ejectSaga helper should validate saga&apos;s key" duration="9"/>
-    <testCase name="injectors ejectSaga helper should cancel a saga in a default mode" duration="3"/>
-    <testCase name="injectors ejectSaga helper should not cancel a daemon saga" duration="1"/>
-    <testCase name="injectors ejectSaga helper should ignore saga that was not previously injected" duration="1"/>
-    <testCase name="injectors ejectSaga helper should remove non daemon saga&apos;s descriptor in production" duration="2"/>
-    <testCase name="injectors ejectSaga helper should not remove daemon saga&apos;s descriptor in production" duration="6"/>
-    <testCase name="injectors ejectSaga helper should not remove daemon saga&apos;s descriptor in development" duration="2"/>
-    <testCase name="injectors injectSaga helper should check a store if the second argument is falsy" duration="1"/>
-    <testCase name="injectors injectSaga helper it should not check a store if the second argument is true" duration="1"/>
-    <testCase name="injectors injectSaga helper should validate saga&apos;s key" duration="4"/>
-    <testCase name="injectors injectSaga helper should validate saga&apos;s descriptor" duration="7"/>
-    <testCase name="injectors injectSaga helper should pass args to saga.run" duration="2"/>
-    <testCase name="injectors injectSaga helper should not start daemon and once-till-unmount sagas if were started before" duration="1"/>
-    <testCase name="injectors injectSaga helper should start any saga that was not started before" duration="4"/>
-    <testCase name="injectors injectSaga helper should not cancel saga if different implementation in production" duration="1"/>
-    <testCase name="injectors injectSaga helper should save an entire descriptor in the saga registry" duration="1"/>
-  </file>
-  <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/lib/dynamicStore/tests/reducerInjectors.test.js">
-    <testCase name="reducer injectors getInjectors should return injectors" duration="7"/>
-    <testCase name="reducer injectors getInjectors should throw if passed invalid store shape" duration="8"/>
-    <testCase name="reducer injectors injectReducer helper should check a store if the second argument is falsy" duration="1"/>
-    <testCase name="reducer injectors injectReducer helper it should not check a store if the second argument is true" duration="4"/>
-    <testCase name="reducer injectors injectReducer helper should validate a reducer and reducer&apos;s key" duration="3"/>
-    <testCase name="reducer injectors injectReducer helper given a store, it should provide a function to inject a reducer" duration="3"/>
-    <testCase name="reducer injectors injectReducer helper should not assign reducer if already existing" duration="2"/>
-    <testCase name="reducer injectors injectReducer helper should assign reducer if different implementation for hot reloading" duration="0"/>
-  </file>
-  <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/components/molecules/TopBanner/tests/TopBanner.test.js">
-    <testCase name="&lt;TopBanner /&gt; should render correctly" duration="14"/>
-    <testCase name="&lt;TopBanner /&gt; should render correctly without subtitle" duration="20"/>
-  </file>
-  <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/lib/dynamicStore/tests/monitorSagas.test.js">
-    <testCase name="monitorSagas should call dispatch with END param" duration="14"/>
-    <testCase name="monitorSagas should wait for all promises to complete when all resolve" duration="3"/>
-    <testCase name="monitorSagas should wait for all promises to complete when all reject" duration="1"/>
-  </file>
-  <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/global/AnalyticsTracking/tests/trackerConfig.test.js">
-    <testCase name="trackingOptions tracker config when not in browser" duration="3"/>
-    <testCase name="trackingOptions tracker config when in browser" duration="1"/>
-  </file>
-  <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/containers/templates/HomePage/tests/Homepage.actions.test.js">
-    <testCase name="HomePage Actions calls Failure" duration="5"/>
-    <testCase name="HomePage Actions calls LOAD_HOME_FAILURE Failure" duration="1"/>
-    <testCase name="HomePage Actions calls HomePageLayout" duration="1"/>
-    <testCase name="HomePage Actions calls HomePageLayoutSuccess" duration="1"/>
-    <testCase name="HomePage Actions calls HomePageLayout" duration="0"/>
-    <testCase name="HomePage Actions calls HomePageLayoutSuccess" duration="2"/>
+    <testCase name="Footer component should render correctly" duration="43"/>
   </file>
   <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/components/atoms/Button/tests/Button.test.js">
-    <testCase name="&lt;Button /&gt; should render correctly" duration="20"/>
+    <testCase name="&lt;Button /&gt; should render correctly" duration="6"/>
   </file>
-  <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/utils/analytics/tests/helpers.test.js">
-    <testCase name="Utils should throw error if configurations are not set" duration="10"/>
-    <testCase name="Utils check if tracker is intialized" duration="1"/>
-    <testCase name="Utils check if configurations are set to tracker" duration="2"/>
-    <testCase name="Utils should throw error if configurations are not set to tracker" duration="1"/>
-    <testCase name="Utils trackActions()" duration="3"/>
-    <testCase name="Utils should throw error on trackActions() without type" duration="4"/>
-  </file>
-  <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/global/reducer/tests/globalReducer.test.js">
-    <testCase name="GlobalReducer should return initial state" duration="3"/>
-    <testCase name="GlobalReducer should return success state and set in devicetype " duration="2"/>
-    <testCase name="GlobalReducer should return success state and set if Device is Tablet " duration="1"/>
-    <testCase name="GlobalReducer should return success state and setRoute " duration="0"/>
-    <testCase name="GlobalReducer should return success state and setConfigKeys " duration="1"/>
-  </file>
-  <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/utils/analytics/tests/middleware.test.js">
-    <testCase name="Tracker Middleware trackingMiddleware" duration="4"/>
+  <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/components/molecules/NavBar/tests/NavBar.test.js">
+    <testCase name="&lt;NavBar /&gt; should render correctly" duration="30"/>
+    <testCase name="&lt;NavBar /&gt; should render correctly" duration="20"/>
   </file>
   <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/global/actions/tests/globalActions.test.js">
     <testCase name="Global Actions should dispatch getLabels" duration="2"/>
-    <testCase name="Global Actions should dispatch setApplicationLabels" duration="0"/>
+    <testCase name="Global Actions should dispatch setApplicationLabels" duration="1"/>
     <testCase name="Global Actions should dispatch setCurrentRoute" duration="1"/>
-  </file>
-  <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/containers/templates/HomePage/tests/HomePage.reducer.test.js">
-    <testCase name="HomePage Reducer functions calls Failure" duration="1"/>
-    <testCase name="HomePage Reducer functions calls addLayoutData" duration="1"/>
-    <testCase name="HomePage Reducer functions calls addHomeEditorialData" duration="0"/>
-    <testCase name="HomePage Reducer dispatch Action LOAD_HOME_SEO_SUCCESS" duration="1"/>
-    <testCase name="HomePage Reducer dispatch Action LOAD_HOME_EDITORIAL_DATA_SUCCESS" duration="0"/>
-    <testCase name="HomePage Reducer dispatch Action FAILURE" duration="1"/>
-    <testCase name="HomePage Reducer return default State" duration="0"/>
   </file>
   <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/components/templates/Layout/tests/Layout.test.js">
     <testCase name="Layout Component should render correctly" duration="0"/>
     <testCase name="Layout Component should render when deviceType is Mobile" duration="0"/>
     <testCase name="Layout Component should render the styled component appropriately" duration="0"/>
+  </file>
+  <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/containers/templates/HomePage/tests/HomePage.test.js">
+    <testCase name="HomePage component should render correctly" duration="19"/>
+  </file>
+  <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/App.test.js">
+    <testCase name="renders without crashing" duration="93"/>
   </file>
 </testExecutions>
