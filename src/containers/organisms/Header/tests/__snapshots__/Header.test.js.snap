@@ -1,7 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header component should render correctly 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <MemoryRouter>
+    <Connect(Header)
+      editorialData={
+        Object {
+          "banner": "Test Banner",
+          "title": "Test Title",
+        }
+      }
+    />
+  </MemoryRouter>
+</Provider>
 `;

@@ -285,19 +285,12 @@ export default (
     WrappedComponent.name ||
     'Component'})`;
 
-  const withConnect = connect(
-    mapStateToProps,
-    mapDispatchToProps
-  );
+  const withConnect = connect(mapStateToProps, mapDispatchToProps);
   const withRedux: Function = initRedux({
     key,
     reducer,
     saga,
   });
 
-  return compose(
-    withRedux,
-    withRouter,
-    withConnect
-  )(WrapperComponent);
+  return compose(withRedux, withRouter, withConnect)(WrapperComponent);
 };

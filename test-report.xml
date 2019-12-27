@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/components/molecules/TopBanner/tests/TopBanner.test.js">
+    <testCase name="&lt;TopBanner /&gt; should render correctly" duration="35"/>
+    <testCase name="&lt;TopBanner /&gt; should render correctly without subtitle" duration="6"/>
+  </file>
+  <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/components/molecules/NavBar/tests/NavBar.style.test.js">
+    <testCase name="ProgressCircle Component should match snapshot " duration="40"/>
+    <testCase name="ProgressCircle Component should match snapshot with vertical view " duration="11"/>
+  </file>
+  <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/containers/organisms/Header/tests/Header.test.js">
+    <testCase name="Header component should render correctly" duration="48"/>
+  </file>
+  <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/containers/organisms/Footer/tests/Footer.test.js">
+    <testCase name="Footer component should render correctly" duration="43"/>
+  </file>
+  <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/components/atoms/Button/tests/Button.test.js">
+    <testCase name="&lt;Button /&gt; should render correctly" duration="6"/>
+  </file>
+  <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/components/molecules/NavBar/tests/NavBar.test.js">
+    <testCase name="&lt;NavBar /&gt; should render correctly" duration="30"/>
+    <testCase name="&lt;NavBar /&gt; should render correctly" duration="20"/>
+  </file>
+  <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/global/actions/tests/globalActions.test.js">
+    <testCase name="Global Actions should dispatch getLabels" duration="2"/>
+    <testCase name="Global Actions should dispatch setApplicationLabels" duration="1"/>
+    <testCase name="Global Actions should dispatch setCurrentRoute" duration="1"/>
+  </file>
+  <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/components/templates/Layout/tests/Layout.test.js">
+    <testCase name="Layout Component should render correctly" duration="0"/>
+    <testCase name="Layout Component should render when deviceType is Mobile" duration="0"/>
+    <testCase name="Layout Component should render the styled component appropriately" duration="0"/>
+  </file>
+  <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/containers/templates/HomePage/tests/HomePage.test.js">
+    <testCase name="HomePage component should render correctly" duration="19"/>
+  </file>
+  <file path="/Applications/XAMPP/xamppfiles/htdocs/react-lite/src/App.test.js">
+    <testCase name="renders without crashing" duration="93"/>
+  </file>
+</testExecutions>

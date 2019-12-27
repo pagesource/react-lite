@@ -1,23 +1,25 @@
-import { serverActions } from '..';
-import { DEVICE_TYPE, CURRENT_ROUTE, IS_TABLET } from '../../constants';
-import { MOBILE } from '../../../constants';
+import { getLabels, setCurrentRoute, setApplicationLabels } from '..';
+import {
+  GET_APPLICATION_LABELS,
+  CURRENT_ROUTE,
+  GET_APPLICATION_LABELS_SUCCESS,
+} from '../../constants';
 
-describe('ProductListing Actions', () => {
-  test('should dispatch addDeviceType', () => {
-    const deviceType = MOBILE;
-    expect(serverActions.addDeviceType(deviceType)).toEqual({
-      type: DEVICE_TYPE,
-      deviceType,
-    });
+describe('Global Actions', () => {
+  test('should dispatch getLabels', () => {
+    expect(getLabels()).toEqual({ type: GET_APPLICATION_LABELS });
   });
 
-  test('should dispatch addIsTablet', () => {
-    const isTablet = true;
-    expect(serverActions.addIsTablet(isTablet)).toEqual({ type: IS_TABLET, isTablet });
+  test('should dispatch setApplicationLabels', () => {
+    const labels = {};
+    expect(setApplicationLabels(labels)).toEqual({
+      type: GET_APPLICATION_LABELS_SUCCESS,
+      data: labels,
+    });
   });
 
   test('should dispatch setCurrentRoute', () => {
     const pathname = '/cart';
-    expect(serverActions.setCurrentRoute(pathname)).toEqual({ type: CURRENT_ROUTE, pathname });
+    expect(setCurrentRoute(pathname)).toEqual({ type: CURRENT_ROUTE, pathname });
   });
 });

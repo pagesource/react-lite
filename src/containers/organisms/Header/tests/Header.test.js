@@ -1,6 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
+import MockProvider from '../../../../../__mocks__/mockProvider';
+
 import Header from '../index';
 
 const editorialData = {
@@ -10,7 +12,11 @@ const editorialData = {
 
 describe('Header component', () => {
   test('should render correctly', () => {
-    const HeaderComponent = shallow(<Header editorialData={editorialData} />);
+    const HeaderComponent = shallow(
+      <MockProvider>
+        <Header editorialData={editorialData} />
+      </MockProvider>
+    );
     expect(HeaderComponent).toMatchSnapshot();
   });
 });

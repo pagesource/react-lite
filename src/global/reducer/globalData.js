@@ -1,6 +1,6 @@
 // @flow
 import get from 'lodash/get';
-import set from 'lodash/set';
+import { updateState } from '../../lib/dynamicStore/utils';
 
 import {
   DEVICE_TYPE,
@@ -33,37 +33,37 @@ export const initState = {
 };
 
 const setDevice = (state: Object, deviceType): DeviceTypeAction =>
-  set(state, 'deviceType', deviceType);
+  updateState(state, { deviceType });
 
 const setIsTablet = (state: Object, isTablet): setIsTabletAction =>
-  set(state, 'isTablet', isTablet);
+  updateState(state, { isTablet });
 
 const setConfigKeys = (state: Object, configKeys): ConfigKeyAction =>
-  set(state, 'configKeys', configKeys);
+  updateState(state, { configKeys });
 
 const setRegion = (state: Object, activeRegion): ActiveRegionAction =>
-  set(state, 'activeRegion', activeRegion);
+  updateState(state, { activeRegion });
 
-const setPageUrl = (state: Object, pageUrl): ActiveRegionAction => set(state, 'pageUrl', pageUrl);
+const setPageUrl = (state: Object, pageUrl): ActiveRegionAction => updateState(state, { pageUrl });
 
-const setRoute = (state: Object, pathname): RouteAction => set(state, 'route', pathname);
+const setRoute = (state: Object, pathname): RouteAction => updateState(state, { route: pathname });
 
-const setPageQuery = (state: Object, pageQuery) => set(state, 'pageQuery', pageQuery);
+const setPageQuery = (state: Object, pageQuery) => updateState(state, { pageQuery });
 
-const setAuthentication = (state, sessionInfo) => set(state, 'sessionInfo', sessionInfo);
+const setAuthentication = (state, sessionInfo) => updateState(state, { sessionInfo });
 const setSessionEmail = state => {
   const sessionInfo = get(state, 'sessionInfo');
-  return set(state, 'sessionInfo', sessionInfo);
+  return updateState(state, { sessionInfo });
 };
 
 const setUserState = (state, userState) => {
   if (userState === USER_STATE_LOGGED_IN) setCookie('lastLogin', new Date());
-  return set(state, 'userState', userState);
+  return updateState(state, { userState });
 };
 
-const setPageOrigin = (state, origin) => set(state, 'pageOrigin', origin);
+const setPageOrigin = (state, origin) => updateState(state, { pageOrigin: origin });
 
-const setApplicationLabels = (state, labels) => set(state, 'labels', labels);
+const setApplicationLabels = (state, labels) => updateState(state, { labels });
 
 /* eslint-disable */
 export default (state: Object = initState, action: GlobalActions) => {

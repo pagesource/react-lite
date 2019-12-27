@@ -1,8 +1,8 @@
+import React from 'react';
 import { shallow } from 'enzyme';
 import 'jest-styled-components';
 import { Layout } from '../Layout';
 import LayoutElement from '../Layout.style';
-// import { DESKTOP, MOBILE } from '../../../../constants';
 
 const props = {
   children: <div>HELLO</div>,
